@@ -48,6 +48,10 @@ public class StdDrawDemo {
 		  * in the standard drawing window. */
 		StdDraw.enableDoubleBuffering();
 
+		/** Sets up the universe so it goes from
+		 * -100, -100 up to 100, 100 */
+		StdDraw.setScale(-100, 100);
+
 		int waitTimeMilliseconds = 100;
 
 		/* Stamp 100 additional pictures in random locations,
@@ -67,7 +71,7 @@ public class StdDrawDemo {
 			/* Reduce wait time for each thing drawn, but
 			 * never wait less than 10 milliseconds. */
 			waitTimeMilliseconds = waitTimeMilliseconds - 1;
-			if (waitTimeMilliseconds < 1) {
+			if (waitTimeMilliseconds < 10) {
 				waitTimeMilliseconds = 10;
 			}
 
@@ -85,6 +89,10 @@ public class StdDrawDemo {
 		  * offscreen canvas to the onscreen canvas, where it is displayed
 		  * in the standard drawing window. */
 		StdDraw.enableDoubleBuffering();
+
+		/** Sets up the universe so it goes from
+		 * -100, -100 up to 100, 100 */
+		StdDraw.setScale(-100, 100);
 
 		double size = 100;
 		while (size < 500) {
@@ -107,8 +115,8 @@ public class StdDrawDemo {
 	public static void main(String[] args) {
 		/** Try commenting out some of these calls and
 		* notice the differences. */
-		drawThree();
+		//drawThree();
 		//drawRandom();
-		//drawZoom();
+		drawZoom();
 	}
 }
